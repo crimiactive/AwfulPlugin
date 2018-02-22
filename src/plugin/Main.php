@@ -15,7 +15,7 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
         }
         # avoid < 3-character variable names
         function onCommand(\pocketmine\command\CommandSender $s, \pocketmine\command\Command $c, string $l, array $a) : bool{
-                # isset() check for every of the args!!?
+                # isset() check for every of the args???
                 # you could simply do if(count($a) < 5)
                 if(!isset($a[0]) || !isset($a[1]) || !isset($a[2]) || !isset($a[3]) || !isset($a[4])){
                         return $this->hasError;

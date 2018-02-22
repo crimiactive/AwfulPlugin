@@ -22,7 +22,7 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                 if(!isset($a[0]) || !isset($a[1]) || !isset($a[2]) || !isset($a[3]) || !isset($a[4])){
                         return $this->haserror;
                 }
-                # no check done if level is loaded... e.g === null
+                # no check done if level is loaded... e.g === null. for perfomance, use this rather than instanceof Level
                 # Level->setBlockIdAt() will return error if level is not loaded.
                 # (readability) lowercase method calls.
                 $l = $this->server->getlevelbyname($a[3]);

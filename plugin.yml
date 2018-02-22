@@ -1,0 +1,16 @@
+name: AwfulPlugin
+commands:
+ setblock:
+  description: Setblock command.
+  
+permissions: []
+depend: []
+softdepend: []
+
+description: A plugin showing off some of the bad coding practices
+
+author: kenygamer
+
+website: https://github.com/kenygamer
+
+main: plugin\Main

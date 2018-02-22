@@ -1,4 +1,4 @@
-
+# confusing plugin.yml structure
 name: AwfulPlugin
 commands:
  setblock:

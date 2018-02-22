@@ -1,11 +1,11 @@
 <?php
 namespace plugin;
-# No use statements.
+# No use statements, no spacing is applied in the whole code, makes the code hard to read and understand.
 class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Listener{
         # var? no visibility, bad practice storing Server instance
         # in a class property when you could do PluginBase->getServer() or Server::getInstance()
         var $server = null;
-        # storing a boolean in a class property.
+        # storing a boolean in a class property... stupid. it's even much easier to type true than $this->noError
         var $noError = TRUE;
         var $hasError = FALSE;
         # no visibility for onEnable()

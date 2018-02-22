@@ -4,7 +4,7 @@ commands:
  setblock:
   description: Setblock command.
   # default?
-  usage: "/setblock <x> <y> <z> <level> <block_id>
+  usage: "/setblock <x> <y> <z> <level> <block_id>"
   
 # useless config keys that are not needed
 permissions: []

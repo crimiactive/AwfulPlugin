@@ -6,8 +6,10 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
         # in a class property when you could do PluginBase->getServer() or Server::getInstance()
         var $server = null;
         # storing a boolean in a class property... stupid. it's even much easier to type true than $this->noError
-        var $noError = TRUE;
-        var $hasError = FALSE;
+        # class property names SHOULD be in this form: noError, hasError, same goes for method names.
+        # for classes it should be the first letter uppercase. e.g Main, PluginBase, PlayerJoinEvent...
+        var $noerror = TRUE;
+        var $haserror = FALSE;
         # no visibility for onEnable()
         function onEnable(){
                 # has no point, as explained above.
@@ -18,7 +20,7 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                 # isset() check for every of the args???
                 # you could simply do if(count($a) < 5)
                 if(!isset($a[0]) || !isset($a[1]) || !isset($a[2]) || !isset($a[3]) || !isset($a[4])){
-                        return $this->hasError;
+                        return $this->haserror;
                 }
                 # no check done if level is loaded... e.g === null
                 # Level->setBlockIdAt() will return error if level is not loaded.
@@ -34,6 +36,6 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                                 $p->sendmessage("Setted block!");
                         }
                 }
-                return $this->noError;
+                return $this->noerror;
         }
 }

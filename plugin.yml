@@ -1,16 +1,20 @@
+
 name: AwfulPlugin
 commands:
  setblock:
   description: Setblock command.
+  # default?
   
+# useless config keys that are not needed
 permissions: []
 depend: []
 softdepend: []
 
-description: A plugin showing off some of the bad coding practices
+description: A PocketMine plugin showing off bad coding practices (but it works!)
 
 author: kenygamer
-
+# what is all this spacing for?
 website: https://github.com/kenygamer
 
+# too generic namespaces
 main: plugin\Main

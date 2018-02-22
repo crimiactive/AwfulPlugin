@@ -21,8 +21,8 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                         return $this->hasError;
                 }
                 # no check done if level is loaded... e.g === null
-                # Level->setBlock() will return error if level is not loaded.
-                # lowercase method call.
+                # Level->setBlockIdAt() will return error if level is not loaded.
+                # (readability) lowercase method calls.
                 $l = $this->server->getlevelbyname($a[3]);
                 $l->setblockidat($a[0], $a[1], $a[2], $a[4]);
                 

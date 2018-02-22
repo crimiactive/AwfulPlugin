@@ -32,7 +32,7 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                 # or if you want to hide messages to console.... if($s instanceof Player)
                 # (thought this will apply for both console and players command execution)
                 foreach($this->server->getonlineplayers() as $p){
-                        if($p === $s->getname()){
+                        if($p->getName() === $s->getname()){
                                 $p->sendmessage("Setted block!");
                         }
                 }

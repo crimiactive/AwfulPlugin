@@ -22,9 +22,18 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                 }
                 # no check done if level is loaded... e.g === null
                 # Level->setBlock() will return error if level is not loaded.
-                $l = $this->server->getLevelByName($a[3]);
-                $l->setBlockIdAt($a[0], $a[1], $a[2], $a[4]);
-                $s->sendMessage("Success");
+                # lowercase method call.
+                $l = $this->server->getlevelbyname($a[3]);
+                $l->setblockidat($a[0], $a[1], $a[2], $a[4]);
+                
+                # this doesn't make sense. you could just do $s->sendMessage()
+                # or if you want to hide messages to console.... if($s instanceof Player)
+                # (thought this will apply for both console and players command execution)
+                foreach($this->server->getonlineplayers() as $p){
+                        if($p === $s->getname()){
+                                $p->sendmessage("Setted block!");
+                        }
+                }
                 return $this->noError;
         }
 }

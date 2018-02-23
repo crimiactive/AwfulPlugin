@@ -15,6 +15,10 @@ depend: []
 softdepend: []
 
 description: A PocketMine plugin showing off bad coding practices (but it works!)
+api: 3.0.0-ALPHA11
+
+# Choose a versioning type for your plugin. I use https://semver.org/
+version: 1
 
 author: kenygamer
 website: https://github.com/kenygamer

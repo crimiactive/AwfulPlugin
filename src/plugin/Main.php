@@ -52,6 +52,7 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                 #  Usually we do if(CommandSender instanceof Player), however we can also do if(CommandSender->getName() !== "CONSOLE")
                 #  This is a perfomance gain too, but it's up to what is your objective with the plugin you're developing...
                 #  e.g perfomance, or readability.
+                
                 return $this->noerror;
                 
         }

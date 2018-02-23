@@ -56,5 +56,5 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
         }
         
         # Bonus: Prefer !== (strict checks) over != (loosely checks). What's the difference? !== checks that both values are of the same type.
-        #  Check out this helpful post in Stackoverflow which should answer to all your questions. https://stackoverflow.com/a/80649
+        #  See this helpful post in Stackoverflow which should answer to all your questions. https://stackoverflow.com/a/80649
 }

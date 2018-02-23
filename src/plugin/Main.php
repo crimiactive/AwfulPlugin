@@ -54,4 +54,8 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                 #  e.g perfomance, or readability.
                 return $this->noerror;
         }
+        
+        # Bonus: Prefer !== over != checks. What's the difference? !== checks that both values are of the same type.
+        #  Since this is not the right place to explain it in detail, you can check out this helpful post in Stackoverflow...
+        #  which should answer to all your questions. https://stackoverflow.com/a/80649
 }

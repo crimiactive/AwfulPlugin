@@ -1,6 +1,8 @@
-A PocketMine-MP plugin showing off bad coding practices (but it works)!
+# AwfulPlugin
+A PocketMine-MP plugin showing off bad coding practices (but it works!)
 
-What does it do?
+## What does it do?
 Adds a /setblock command to your server.
 
+## Warnings
 Please never use it in a production server. This plugin is only a guide for future developers.

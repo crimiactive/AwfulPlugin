@@ -22,24 +22,24 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                 if(!isset($a[0]) || !isset($a[1]) || !isset($a[2]) || !isset($a[3]) || !isset($a[4])){
                         return $this->haserror;
                 }
-                # no check done if level is loaded... e.g === null.
                 
-                # for perfomance:
+                # Level->setBlockIdAt() will return error if level is not loaded.
+                # (readability) lowercase method calls. Should be Server->getLevelByName() and Level->setBlockIdAt()
+                # No check done if level is loaded... e.g === null.
+                
+                # For perfomance:
                 # use this rather than instanceof Level
                 # however it's the same as typehinting, the perfomance gain is minimal and
                 # according to the docs, Server->getLevelByName() returns either a Level instance or null
                 # if the level/world is not loaded.
-                
-                # Level->setBlockIdAt() will return error if level is not loaded.
-                # (readability) lowercase method calls.
                 $l = $this->server->getlevelbyname($a[3]);
                 $l->setblockidat($a[0], $a[1], $a[2], $a[4]);
                 
-                # this doesn't make sense. you could just do $s->sendMessage()
+                # This doesn't make sense. you could just do $s->sendMessage()
                 # or if you want to hide messages to console.... if($s instanceof Player)
-                # (thought this will apply for both console and players command execution)
+                # (thought this will apply for both console and players command execution, but is just making the code longer)
                 foreach($this->server->getonlineplayers() as $p){
-                        if($p->getName() === $s->getname()){
+                        if($p->getName() === $s->getname()){ # if the command is ran from the console, CommandSender->getName() will return CONSOLE
                                 $p->sendmessage("Setted block!");
                         }
                 }

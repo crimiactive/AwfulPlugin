@@ -16,11 +16,20 @@ class SetBlock extends PluginBase{
         if(count($args) < 5){
             return false;
         }
+        /*
+         * $args[3] = Level name
+         */
         $level = $this->getServer()->getLevelByName($args[3]);
         if(!$level instanceof Level){
             $sender->sendMessage(self::CMD_PREFIX . " Level is not loaded");
             return true;
         }
+        /*
+         * $args[0] = X
+         * $args[1] = Y
+         * $args[2] = Z
+         * $args[4] = Block ID
+         */
         $level->setBlockIdAt($args[0], $args[1], $args[2], $args[4]);
         if($sender instanceof Player){
             $sender->sendMessage(self::CMD_PREFIX . " Block has been set."):

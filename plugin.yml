@@ -1,12 +1,14 @@
-# Confusing plugin.yml structure
+# As seen hare, the plugin.yml has a confusing structure.
 name: AwfulPlugin
 commands:
  setblock:
-  description: Setblock command.
-  # Wondering where did the default key went through.
+  description: Setblock command. # Describe what the command does. We already know that setblock is a command.
+  # Wondering where did the default key went through. (default is true)
+  #  See this link for all possible default command permission values:
+  #  https://github.com/pmmp/PocketMine-MP/blob/master/src/pocketmine/permission/Permission.php#L35-L38
   usage: "/setblock <x> <y> <z> <level> <block_id>"
   
-# Useless config keys that are not needed
+# Useless keys that are not needed. By default, these are already empty ([])
 permissions: []
 depend: []
 softdepend: []
@@ -14,8 +16,7 @@ softdepend: []
 description: A PocketMine plugin showing off bad coding practices (but it works!)
 
 author: kenygamer
-# What is all this spacing for?
 website: https://github.com/kenygamer
 
-# Too generic namespaces
+# A too generic namespace is being used here.
 main: plugin\Main

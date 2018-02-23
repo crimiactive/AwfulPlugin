@@ -1,12 +1,12 @@
-# confusing plugin.yml structure
+# Confusing plugin.yml structure
 name: AwfulPlugin
 commands:
  setblock:
   description: Setblock command.
-  # default?
+  # Wondering where did the default key went through.
   usage: "/setblock <x> <y> <z> <level> <block_id>"
   
-# useless config keys that are not needed
+# Useless config keys that are not needed
 permissions: []
 depend: []
 softdepend: []
@@ -14,8 +14,8 @@ softdepend: []
 description: A PocketMine plugin showing off bad coding practices (but it works!)
 
 author: kenygamer
-# what is all this spacing for?
+# What is all this spacing for?
 website: https://github.com/kenygamer
 
-# too generic namespaces
+# Too generic namespaces
 main: plugin\Main

@@ -1,0 +1,17 @@
+name: SetBlock
+main: SetBlock\SetBlock
+api: 3.0.0-ALPHA11
+version: 1.0.0
+
+author: kenygamer
+description: A PocketMine-MP plugin to bring back the /setblock command
+
+commands:
+    setblock:
+        description: "Sets a block in the given position."
+        usage: "/setblock <x> <y> <z> <level> <block_id>"
+        permission: setblock.command
+permissions:
+    setblock.command:
+        permission: "Allows access to the setblock command."
+        default: op

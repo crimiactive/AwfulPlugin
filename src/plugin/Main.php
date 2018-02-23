@@ -45,7 +45,7 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                         if($p->getname() === $s->getname()){
                                 # Prefer double quotes over single quotes. Helps in perfomance? Not really, but you shouldn't be worried
                                 # of using double quotes in your plugin. Read below for an explanation.
-                                $p->sendmessage("Setted block!");
+                                $p->sendmessage('Setted block!');
                         }
                 }
                 # If you didn't know, you can also get the name of the console. It will simply return CONSOLE, in uppercase, yes.

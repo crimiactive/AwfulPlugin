@@ -2,4 +2,4 @@
 A PocketMine-MP plugin showing off bad coding practices (but it works!)
 
 ## What does it do?
-Adds a /setblock command to your server. NEVER think of using this plugin in a production server. It's only meant to be a guide for future PocketMine developers. Read the comments over the code.
+Adds a /setblock command to your server. NEVER think of using this plugin in a production server. It's only meant to be a guide for future PocketMine developers. Please read the comments in the code.

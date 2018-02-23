@@ -53,6 +53,7 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
                 #  This is a perfomance gain too, but it's up to what is your objective with the plugin you're developing...
                 #  e.g perfomance, or readability.
                 return $this->noerror;
+                
         }
         
         # Bonus: Prefer !== (strict checks) over != (loosely checks). What's the difference? !== checks that both values are of the same type.

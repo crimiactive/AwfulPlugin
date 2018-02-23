@@ -1,4 +1,5 @@
-# As seen here, the plugin.yml has a confusing structure.
+# Give a short look to the whole file and you will already notice a confusing structure.
+#  In first place, keys are not properly organized...
 name: AwfulPlugin
 commands:
  setblock:
@@ -19,4 +20,5 @@ author: kenygamer
 website: https://github.com/kenygamer
 
 # A too generic namespace is being used here.
+# Credit to SOFe who where the first in correcting me on this :P
 main: plugin\Main

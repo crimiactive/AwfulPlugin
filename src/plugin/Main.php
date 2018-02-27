@@ -42,7 +42,7 @@ class Main extends \pocketmine\plugin\PluginBase{
                 # The code below applies for both player and console command execution mode, but will just make the code longer...
                 #  something we should preferably avoid.
                 foreach($this->server->getonlineplayers() as $p){
-                        if($p->getname() === $s->getname()){
+                        if($p->getname() == $s->getname()){ # Use strict checks (===)
                                 # Prefer double quotes over single quotes. Helps in perfomance? Not really, but you shouldn't be worried
                                 # of using double quotes in your plugin. Read below for an explanation.
                                 $p->sendmessage('Setted block!');
